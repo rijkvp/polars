@@ -74,6 +74,7 @@ from polars.exceptions import (
     ChronoFormatWarning,
     ColumnNotFoundError,
     ComputeError,
+    CopyNotAllowedError,
     DuplicateError,
     InvalidOperationError,
     NoDataError,
@@ -226,6 +227,7 @@ __all__ = [
     "exceptions",
     # exceptions/errors
     "ArrowError",
+    "CopyNotAllowedError",
     "ColumnNotFoundError",
     "ComputeError",
     "DuplicateError",
