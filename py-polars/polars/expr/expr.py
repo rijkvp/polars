@@ -9931,6 +9931,8 @@ class Expr:
 
         .. deprecated:: 0.20.9
             This method has been renamed to :meth:`deserialize`.
+            Note that the new method operations in file-like inputs rather than strings.
+            Enclose your input in `io.StringIO` to keep the same behavior.
 
         Parameters
         ----------
@@ -9938,7 +9940,9 @@ class Expr:
             JSON encoded string value
         """
         issue_deprecation_warning(
-            "`Expr.from_json` is deprecated. It has been renamed to `Expr.deserialize`.",
+            "`Expr.from_json` is deprecated. It has been renamed to `Expr.deserialize`."
+            " Note that the new method operations in file-like inputs rather than strings."
+            " Enclose your input in `io.StringIO` to keep the same behavior.",
             version="0.20.9",
         )
         return cls.deserialize(StringIO(value))
